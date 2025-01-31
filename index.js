@@ -7,7 +7,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+    origin:["https://resto-client.vercel.app"],
+    methods:["POST","GET","DELETE","DELETE"],
+    credentials:true
+}));
+
 app.use(express.json());
 
 import menuRoutes from './Routes/menuRoutes.js'
