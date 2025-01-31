@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors({
     origin:["https://resto-client.vercel.app"],
-    methods:["POST","GET","DELETE","DELETE"],
+    methods:["POST","GET","DELETE","PUT"],
     credentials:true
 }));
 
