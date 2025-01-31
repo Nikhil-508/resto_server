@@ -9,12 +9,12 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin:["https://resto-client.vercel.app"],
-    methods:["POST","GET","DELETE","PUT"],
-    credentials:true,
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
-
+    origin: ["https://resto-client.vercel.app"], // The specific origin in production
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+  }));
+  
 app.use(express.json());
 
 import menuRoutes from './Routes/menuRoutes.js'
