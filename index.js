@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: ["https://resto-client.vercel.app"], // Allow your frontend
+    origin: ["https://resto-client.vercel.app", "https://resto-server.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
