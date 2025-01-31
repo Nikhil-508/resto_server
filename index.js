@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import connectDB from './Config/db.js'
+import menuRoutes from './Routes/menuRoutes.js'
+import menuItemRoutes from './Routes/menuItemRoutes.js'
 
 dotenv.config();
 connectDB();
@@ -17,8 +19,7 @@ app.use(cors({
   
 app.use(express.json());
 
-import menuRoutes from './Routes/menuRoutes.js'
-import menuItemRoutes from './Routes/menuItemRoutes.js'
+
 
 app.use("/api/menus", menuRoutes);
 app.use("/api/menuItems", menuItemRoutes);
